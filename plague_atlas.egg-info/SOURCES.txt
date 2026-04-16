@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+plague/__init__.py
+plague/__main__.py
+plague/cli.py
+plague/detect.py
+plague/food.py
+plague/scan/__init__.py
+plague_atlas.egg-info/PKG-INFO
+plague_atlas.egg-info/SOURCES.txt
+plague_atlas.egg-info/dependency_links.txt
+plague_atlas.egg-info/entry_points.txt
+plague_atlas.egg-info/requires.txt
+plague_atlas.egg-info/top_level.txt
+tests/test_plague.py

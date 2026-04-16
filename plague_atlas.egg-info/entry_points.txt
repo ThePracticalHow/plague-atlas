@@ -1,0 +1,2 @@
+[console_scripts]
+plague = plague.cli:main

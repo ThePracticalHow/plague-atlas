@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plague-atlas"
+version = "0.1.0"
+description = "Pathogen detection engine. Fungal scanner, gene panel diagnosis, dietary war scoring."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Jixiang Leng"}]
+keywords = [
+    "fungal-infection", "pathogen-detection", "mycology",
+    "coupling-tensor", "gene-panel", "diagnosis",
+    "antifungal", "food-atlas",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.9",
+    "coherence-tensor>=0.1.0",
+]
+
+[project.optional-dependencies]
+h5ad = ["scanpy>=1.9", "anndata"]
+bam = ["spliceosome-atlas>=0.1.0"]
+dev = ["pytest"]
+
+[project.scripts]
+plague = "plague.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ThePracticalHow/plague-atlas"
+
+[tool.setuptools.packages.find]
+include = ["plague*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
